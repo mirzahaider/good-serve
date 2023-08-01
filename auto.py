@@ -7,7 +7,7 @@ def get_dawn_columns():
     url = "https://www.dawn.com/newspaper/column"
 
     chrome_options = Options()
-    #chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--headless')
     driver = webdriver.Chrome(options=chrome_options)
 
     driver.get(url)
