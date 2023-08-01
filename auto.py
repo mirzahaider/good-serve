@@ -1,20 +1,14 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-
-from time import sleep
 
 
 def get_dawn_columns():
     url = "https://www.dawn.com/newspaper/column"
 
     chrome_options = Options()
-    chrome_options.add_argument('--headless')
-    #driver = webdriver.Chrome(options=chrome_options)
-    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
-
+    #chrome_options.add_argument('--headless')
+    driver = webdriver.Chrome(options=chrome_options)
 
     driver.get(url)
 
